@@ -37,7 +37,7 @@
         "pkg-up": "^3.0.1",
         "prettier": "^1.16.4",
         "ramda": "^0.26.1",
-        "readlint": "^0.7.1",
+        "readlint": "^0.7.2",
         "taskfile": "^0.10.0"
     }
 }

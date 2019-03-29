@@ -1567,7 +1567,7 @@ eslint@^5.15.3:
     table "^5.2.3"
     text-table "^0.2.0"
 
-esm@^3.1.3, esm@^3.2.20, esm@^3.2.22:
+esm@^3.2.20, esm@^3.2.22:
   version "3.2.22"
   resolved "https://registry.yarnpkg.com/esm/-/esm-3.2.22.tgz#5062c2e22fee3ccfee4e8f20da768330da90d6e3"
   integrity sha512-z8YG7U44L82j1XrdEJcqZOLUnjxco8pO453gKOlaMD1/md1n/5QrscAmYG+oKUspsmDLuBFZrpbxI6aQ67yRxA==
@@ -2776,7 +2776,7 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@^0.6.0:
+marked@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.1.tgz#a63addde477bca9613028de4b2bc3629e53a0562"
   integrity sha512-+H0L3ibcWhAZE02SKMqmvYsErLo4EAVJxu5h3bHBBDvvjeWXtl92rGUSBYHL2++5Y+RSNgl8dYOAXcYe7lp1fA==
@@ -3461,7 +3461,7 @@ prepend-http@^1.0.1:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-prettier@^1.16.1, prettier@^1.16.4:
+prettier@^1.16.4:
   version "1.16.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
   integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
@@ -3655,20 +3655,19 @@ readdirp@^2.2.1:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
-readlint@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/readlint/-/readlint-0.7.1.tgz#f2ae2a8596c12b03aa41aa35c98712b1e926e524"
-  integrity sha512-n5wh4Gv5qV0Ipw5vpAT/nrO+eWJge88LDvQweIAmgr3w9/ae5+VpqmKzdeYqIQC5RPonzdHczKN6up99m3ijZw==
+readlint@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/readlint/-/readlint-0.7.2.tgz#c72af62b4707dc0706194d5c68fb9babafec2da3"
+  integrity sha512-241Kw3+kn7QeRTFjCB7/w307furO5rClYuGKNJxkNSetN6WKrq4jnZeHfKXtdtcAXdVcpstj0krmZ2WHGE1IBA==
   dependencies:
     capitalize "^2.0.0"
     chalk "^2.4.2"
-    esm "^3.1.3"
     figlet "^1.2.1"
     find-up "^3.0.0"
-    marked "^0.6.0"
+    marked "^0.6.1"
     msg-generator "^0.1.1"
     normalize-newline "^3.0.0"
-    prettier "^1.16.1"
+    prettier "^1.16.4"
     ramda "^0.26.1"
 
 redent@^2.0.0:

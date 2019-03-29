@@ -1,15 +1,43 @@
 {
-  "name": "ava-webcomponents",
-  "version": "0.1.0",
-  "description": "Utility middleware for testing web components in AVA.",
-  "main": "src/index.js",
-  "repository": "git@github.com:Wildhoney/ava-webcomponents.git",
-  "author": "Adam Timberlake <adam.timberlake@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@babel/generator": "^7.4.0",
-    "@babel/parser": "^7.4.2",
-    "express": "^4.16.4",
-    "puppeteer": "^1.14.0"
-  }
+    "name": "ava-webcomponents",
+    "version": "0.1.0",
+    "description": "Utility middleware for testing web components in AVA.",
+    "main": "src/index.js",
+    "repository": "git@github.com:Wildhoney/ava-webcomponents.git",
+    "author": "Adam Timberlake <adam.timberlake@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "test": "taskfile test",
+        "format": "taskfile format"
+    },
+    "ava": {
+        "failFast": true,
+        "require": [
+            "esm"
+        ]
+    },
+    "dependencies": {
+        "@babel/generator": "^7.4.0",
+        "@babel/parser": "^7.4.2",
+        "express": "^4.16.4",
+        "puppeteer": "^1.14.0"
+    },
+    "devDependencies": {
+        "ava": "^1.4.1",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.15.3",
+        "eslint-config-prettier": "^4.1.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-react": "^7.12.4",
+        "eslint-plugin-standard": "^4.0.0",
+        "esm": "^3.2.22",
+        "pkg-up": "^3.0.1",
+        "prettier": "^1.16.4",
+        "ramda": "^0.26.1",
+        "readlint": "^0.7.1",
+        "taskfile": "^0.10.0"
+    }
 }

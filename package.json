@@ -20,6 +20,7 @@
         "@babel/generator": "^7.4.0",
         "@babel/parser": "^7.4.2",
         "express": "^4.16.4",
+        "pkg-up": "^3.0.1",
         "puppeteer": "^1.14.0"
     },
     "devDependencies": {
@@ -34,7 +35,6 @@
         "eslint-plugin-react": "^7.12.4",
         "eslint-plugin-standard": "^4.0.0",
         "esm": "^3.2.22",
-        "pkg-up": "^3.0.1",
         "prettier": "^1.16.4",
         "ramda": "^0.26.1",
         "readlint": "^0.7.2",

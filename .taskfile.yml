@@ -1,0 +1,17 @@
+- name: test/spec
+  task: ava
+
+- name: test/lint
+  tasks:
+      - readlint
+      - - prettier --list-different "src/**/*.js"
+      - - - eslint "src/**/*.js"
+
+- name: test
+  tasks:
+      - taskfile test/spec
+      - - taskfile test/lint
+
+- name: format
+  tasks:
+      - prettier --write "src/**/*.js"

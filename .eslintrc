@@ -1,0 +1,8 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["standard", "prettier", "prettier/standard"],
+    "globals": {
+        "customElements": true,
+        "HTMLElement": true
+    }
+}

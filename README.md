@@ -31,7 +31,8 @@ customElements.define('x-ava', Hello);
 We then use `ava-webcomponents` to import the file in your AVA test, which then gives you access to the Puppeteer `page` variable, as well as a util function for awaiting upgrade of a defined web component. All imports in your web components file will be resolved relative to the nearest `package.json` file, which uses a simple Express server instance to import your files.
 
 ```javascript
-
+import test from 'ava';
+import withComponent from 'ava-webcomponents';
 
 test(
     'It should render "Hello AVA!";',

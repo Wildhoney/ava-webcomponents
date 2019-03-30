@@ -11,7 +11,7 @@ class Name extends HTMLElement {
     }
 
     connectedCallback() {
-        this.innerHTML = 'Hello Adam!';
+        this.innerHTML = `Hello ${this.getAttribute('name')}!`;
     }
 }
 

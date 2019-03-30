@@ -7,20 +7,15 @@ test(
     async (t, { page, utils }) => {
         await utils.waitForUpgrade('x-name');
 
-        const content = await page.evaluate(async () => {
-            const node = document.createElement('x-name');
-            document.body.append(node);
-            return node.innerHTML;
-        });
-        t.is(content, 'Hello Adam!');
+        await utils.attachElement('x-name', { name: 'Adam' });
+        t.is(await utils.innerHTML('x-name'), 'Hello Adam!');
+        t.is(await utils.outerHTML('x-name'), '<x-name name="Adam">Hello Adam!</x-name>');
 
-        {
-            const content = await page.evaluate(async () => {
-                const node = document.querySelector('x-name');
-                node.setAttribute('name', 'Maria');
-                return node.innerHTML;
-            });
-            t.is(content, 'Hello Maria!');
-        }
+        await page.evaluate(() => {
+            const node = document.querySelector('x-name');
+            node.setAttribute('name', 'Maria');
+        });
+        t.is(await utils.innerHTML('x-name'), 'Hello Maria!');
+        t.is(await utils.outerHTML('x-name'), '<x-name name="Maria">Hello Maria!</x-name>');
     }
 );

@@ -47,9 +47,21 @@ const withComponent = (file, options = {}) => {
         });
 
         const waitForUpgrade = name => page.waitForFunction(`Boolean(customElements.get('${name}'))`);
+        const innerHTML = name => page.$eval(name, el => el.innerHTML);
+        const outerHTML = name => page.$eval(name, el => el.outerHTML);
+        const attachElement = (name, attributes = {}) =>
+            page.evaluate(
+                ({ name, attributes }) => {
+                    const node = document.createElement(name);
+                    Object.entries(attributes).forEach(([key, value]) => node.setAttribute(key, value));
+                    document.body.append(node);
+                    return node;
+                },
+                { name, attributes }
+            );
 
         try {
-            await run(t, { page, utils: { waitForUpgrade } });
+            await run(t, { page, utils: { waitForUpgrade, attachElement, innerHTML, outerHTML } });
         } finally {
             await page.close();
             await browser.close();

@@ -52,3 +52,5 @@ test(
     }
 );
 ```
+
+With the second argument of the `withComponent` function you can pass options for `puppeteer.launch`. However there's also a shortcut for debugging Puppeteer by using `withComponent.debug` which slows down the tests, opens the devtools, and prevents Chromium from being headless.
